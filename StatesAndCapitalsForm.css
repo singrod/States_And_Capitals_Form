@@ -1,0 +1,40 @@
+body {
+	margin: 0;
+	padding: 0;
+}
+table, th, td {
+	border: 1px solid black;	
+	border-collapse: collapse;
+	padding: 5px;
+}
+table {
+	height: 60%;
+	width: 30%;
+	margin-top: 10px;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: #E6E4D1;
+	text-align: center;
+}
+th {
+	color: blue;
+	font-size: 20px;
+}
+input {
+	margin-top: 10px;
+}
+#boxes {
+	text-align: center;
+}
+p {
+	color: brown;
+}
+#capital {
+	font-size: 14px;
+	color: red;
+	font-weight: bold;
+}
+#state {
+	font-size: 16px;
+	font-family: Georgia, Serif;
+}

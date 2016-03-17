@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+	<title>States and Capitals Search</title>
+	<meta charset="UTF-8">
+	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+	<script src="StatesAndCapitalsForm.js"></script>
+	<link type="text/css" rel="stylesheet" href="StatesAndCapitalsForm.css"/>
+</head>
+<body ng-app="statesApp">
+	<div ng-controller="statesCtrl">
+		<div id="boxes">
+		Rows <input type="number" step="1" min="25" max="50" ng-model="rowNumber"/>
+		<input type="text" placeholder="Search by State" ng-model="searchList.state"/>
+		<input type="text" placeholder="Search by Capital" ng-model="searchList.capital"/>
+		<p>When searching, adjust Rows to '50'</p>
+		</div>
+		<table>
+			<thead>
+				<tr>
+					<th>State</th>
+					<th>Capital</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr ng-repeat="state in states | limitTo: rowNumber | filter: searchList">
+					<td id="state">{{ state.state }}</td>
+					<td id="capital">{{ state.capital }}</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</body>
+</html>
